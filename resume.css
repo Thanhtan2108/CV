@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    background: #0073e6;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left, .right {
+    padding: 20px;
+}
+
+.left {
+    flex: 1.5;
+    background: #eef5ff;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.right {
+    flex: 1;
+}
+
+.profile {
+    display: flex;
+    gap: 20px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.description {
+    flex: 1;
+    font-size: 15px;
+}
+
+h2 {
+    background: #0073e6;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none; /* Xóa bỏ dấu chấm đầu dòng */
+    padding: 0; /* lấp đầy khoảng trắng padding của tag ul */
+}
+
+li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd; /* thêm đường viền dưới */
+}
+
+.contact a {
+    text-decoration: none;
+    font-size: 40px;
+    margin-right: 10px;
+    color: #0073e6;
+}
+
+.contact a:hover {
+    color: #005bb5;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #0073e6;
+    color: white;
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .left, .right {
+        margin-right: 0;
+    }
+}
