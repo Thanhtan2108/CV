@@ -10,7 +10,7 @@ body {
   margin: auto;
   background: white;
   padding: 20px 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1 {
   font-size: 1.8rem;
@@ -25,7 +25,8 @@ h1 {
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
 }
-.contact1, .contact2 {
+.contact1,
+.contact2 {
   width: 48%;
 }
 h2 {
@@ -85,7 +86,8 @@ li {
   .skill-label {
     width: auto;
   }
-  .contact1, .contact2 {
+  .contact1,
+  .contact2 {
     width: 100%;
   }
 }
