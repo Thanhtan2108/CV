@@ -1,81 +1,74 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
+    line-height: 1.5;              /* Thu gọn dòng */
+    margin: 0;
     background-color: #f4f4f4;
     color: #333;
 }
 .container {
     max-width: 1000px;
-    margin: auto;
+    margin: 0.8cm auto;
     background: white;
-    padding: 30px 40px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+    padding: 1.1cm 1.3cm;           /* Giảm padding lớn */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+.container span {
+    font-weight: bold;
 }
 h1 {
     font-size: 2rem;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: #1a3c6e;
 }
 h2 {
-    font-size: 1.35rem;
+    font-size: 1.32rem;
     background-color: #e6f0ff;
     color: #1a3c6e;
-    padding: 8px 12px;
-    margin-top: 25px;
+    padding: 7px 12px;
+    margin: 18px 0 8px 0;           /* Thu gọn khoảng cách giữa các heading */
     border-left: 5px solid #1a3c6e;
 }
 
+/* CONTACT - Facebook & Điện thoại sang phải */
 .contact {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     border-bottom: 2px solid #ddd;
-    padding-bottom: 15px;
+    padding-bottom: 12px;
 }
-.contact1 {
-    width: 48%;
-}
-.contact2 {
-    width: 48%;
-    text-align: right;
-}
+.contact1 { width: 48%; }
+.contact2 { width: 48%; text-align: right; }
 
+/* Căn đều 2 lề cho đoạn văn */
 p {
     text-align: justify;
-    margin-bottom: 12px;
+    margin-bottom: 9px;             /* Giảm khoảng cách dưới đoạn văn */
 }
 
-.contact1 p {
-    text-align: left;
-}
-.contact2 p {
-    text-align: right;
-}
+/* Giữ căn lề cho phần Contact */
+.contact1 p { text-align: left; }
+.contact2 p { text-align: right; }
 
 .line {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 6px 0;
+    margin: 5px 0;
 }
-.left {
-    font-weight: bold;
-}
-.right {
-    font-style: italic;
-    color: #555;
-}
+.left { font-weight: bold; }
+.right { font-style: italic; color: #555; }
+
 ul {
-    margin-top: 8px;
-    margin-bottom: 18px;
-    padding-left: 22px;
+    margin-top: 6px;
+    margin-bottom: 13px;            /* Giảm khoảng cách dưới danh sách */
+    padding-left: 20px;
 }
-li {
-    margin-bottom: 6px;
-}
+li { margin-bottom: 4.5px; }
+
 .skills {
     list-style: none;
     padding-left: 0;
@@ -83,19 +76,18 @@ li {
 .skills li {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     align-items: baseline;
 }
 .skill-label {
     font-weight: bold;
-    width: 210px;
+    width: 205px;
     color: #1a3c6e;
 }
-.skill-content {
-    flex: 1;
-}
+.skill-content { flex: 1; }
+
 .project {
-    margin-bottom: 25px;
+    margin-bottom: 16px;            /* Giảm khoảng cách giữa các dự án */
 }
 .certificate a {
     color: #0066cc;
@@ -105,28 +97,33 @@ li {
     text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-    .skills li {
-        flex-direction: column;
-    }
-    .skill-label {
-        width: auto;
-    }
-    .contact1,
-    .contact2 {
-        width: 100%;
-        text-align: left;
+/* ====================== IN A4 - ĐẢM BẢO CHỈ 2 TRANG ====================== */
+@media print {
+    body { 
+        background: white; 
+        margin: 0; 
     }
     .container {
-        padding: 20px 25px;
+        margin: 0;
+        padding: 0.85cm 1.1cm;      /* Padding rất gọn khi in */
+        box-shadow: none;
+        width: 100%;
+        max-width: 100%;
     }
+    @page {
+        size: A4 portrait;
+        margin: 0.9cm;              /* Lề trang chuẩn A4, giúp tiết kiệm không gian */
+    }
+    h2 { margin-top: 16px; margin-bottom: 7px; }
+    .project { margin-bottom: 14px; }
+    ul { margin-bottom: 11px; }
+    p { margin-bottom: 8px; }
 }
 
-/* In ấn đẹp hơn */
-@media print {
-    body { background: white; margin: 0; }
-    .container { box-shadow: none; padding: 20px; }
-    p { text-align: justify; }
-    .contact2 p { text-align: right; }
+/* Responsive (không ảnh hưởng khi in) */
+@media (max-width: 700px) {
+    .container { padding: 20px 25px; }
+    .skills li { flex-direction: column; }
+    .skill-label { width: auto; }
+    .contact1, .contact2 { width: 100%; text-align: left; }
 }
