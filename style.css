@@ -1,93 +1,132 @@
-/* Giu nguyên style cũ (nếu có file style.css riêng thì link lại, ở đây tôi viết inline để dễ xem) */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-  margin: 20px;
-  background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
 }
 .container {
-  max-width: 1000px;
-  margin: auto;
-  background: white;
-  padding: 20px 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 }
 h1 {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 10px;
-}
-.contact {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-}
-.contact1,
-.contact2 {
-  width: 48%;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #1a3c6e;
 }
 h2 {
-  background-color: #e0e0e0;
-  padding: 5px 10px;
-  margin-top: 20px;
-  font-size: 1.3rem;
+    font-size: 1.35rem;
+    background-color: #e6f0ff;
+    color: #1a3c6e;
+    padding: 8px 12px;
+    margin-top: 25px;
+    border-left: 5px solid #1a3c6e;
 }
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 15px;
+}
+.contact1 {
+    width: 48%;
+}
+.contact2 {
+    width: 48%;
+    text-align: right;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+.contact1 p {
+    text-align: left;
+}
+.contact2 p {
+    text-align: right;
+}
+
 .line {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 6px 0;
 }
 .left {
-  font-weight: bold;
+    font-weight: bold;
 }
 .right {
-  font-style: italic;
-  color: #555;
+    font-style: italic;
+    color: #555;
 }
 ul {
-  margin-top: 5px;
-  margin-bottom: 15px;
-  padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    padding-left: 22px;
 }
 li {
-  margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 .skills {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
 }
 .skills li {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    align-items: baseline;
 }
 .skill-label {
-  font-weight: bold;
-  width: 200px;
+    font-weight: bold;
+    width: 210px;
+    color: #1a3c6e;
 }
 .skill-content {
-  flex: 1;
+    flex: 1;
 }
 .project {
-  margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .certificate a {
-  text-decoration: none;
-  color: #0066cc;
+    color: #0066cc;
+    text-decoration: none;
 }
+.certificate a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
 @media (max-width: 700px) {
-  .skills li {
-    flex-direction: column;
-  }
-  .skill-label {
-    width: auto;
-  }
-  .contact1,
-  .contact2 {
-    width: 100%;
-  }
+    .skills li {
+        flex-direction: column;
+    }
+    .skill-label {
+        width: auto;
+    }
+    .contact1,
+    .contact2 {
+        width: 100%;
+        text-align: left;
+    }
+    .container {
+        padding: 20px 25px;
+    }
+}
+
+/* In ấn đẹp hơn */
+@media print {
+    body { background: white; margin: 0; }
+    .container { box-shadow: none; padding: 20px; }
+    p { text-align: justify; }
+    .contact2 p { text-align: right; }
 }
