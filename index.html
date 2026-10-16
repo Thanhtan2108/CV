@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngo Thanh Tan - Embedded Systems and IoT Intern - CV</title>
+    <meta name="description" content="CV of Ngo Thanh Tan, Computer Engineering Technology student seeking an embedded systems / IoT internship." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Ngo Thanh Tan</h1>
+        <p class="contact">
+          Ho Chi Minh City, Vietnam | +84 327 524 504 |
+          <a href="mailto:nthanhtan2004@gmail.com">nthanhtan2004@gmail.com</a> |
+          <a href="https://github.com/Thanhtan2108" target="_blank" rel="noopener noreferrer">github.com/Thanhtan2108</a>
+        </p>
+      </header>
+
+      <section>
+        <h2>Summary</h2>
+        <p>
+          Computer Engineering Technology student seeking an Embedded Systems / IoT Internship. Experience in PCB
+          assembly and testing at an electronics manufacturer, and C/C++ firmware for ESP32, STM32 and Edge AI.
+        </p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="entry">
+          <h3>
+            <span>Ho Chi Minh City University of Technology and Engineering (HCM-UTE)</span>
+            <span class="when">09/2022 - Expected 01/2027</span>
+          </h3>
+          <div class="meta"><span>Bachelor of Engineering in Computer Engineering Technology</span><span class="aside">CPA: 2.86/4.0</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+        <div class="entry">
+          <h3>
+            <span>SVHB Technology &amp; Engineering Services Co., Ltd (Linhkien1993)</span>
+            <span class="when">04/2026 - 09/2026</span>
+          </h3>
+          <div class="meta"><span>R&amp;D Technical Intern (3 months), then Technical Staff (2 months)</span></div>
+          <ul>
+            <li>Assembled and finished PCBAs, hand-soldering SMD and through-hole components with a soldering iron, hot-air station and hot plate.</li>
+            <li>Prepared Bills of Materials (BOM) and verified components and common ICs against schematics and footprint drawings.</li>
+            <li>Tested assembled boards with a multimeter and functional checks; reproduced simple boards by tracing connections when no schematic was available.</li>
+            <li>Developed ESP32/ESP8266 firmware (Arduino framework) for industrial relay control: debounced multi-channel buttons, 8 relays driven via 74HC595 with ULN2803 buffering, and 0-5 V / 4-20 mA input reading.</li>
+            <li>Wrote firmware and user guides for Arduino Nano projects (sensors, power supply, motors) in STEM education kits.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+
+        <div class="entry">
+          <h3>
+            <a href="https://github.com/Thanhtan2108/Fall_Detection_Edge_AI" target="_blank" rel="noopener noreferrer">Fall Detection Device with Edge AI (Graduation Project)</a>
+            <span class="when">02/2026 - 07/2026</span>
+          </h3>
+          <div class="meta"><span>ESP32, MPU6050, Edge Impulse, SIM module, C/C++, PlatformIO</span></div>
+          <ul>
+            <li>Built an ESP32 fall detector that samples an MPU6050 accelerometer at 25 Hz and classifies Fall/Normal in real time with a quantized neural network running on the microcontroller.</li>
+            <li>Collected and labeled motion data, trained the model on Edge Impulse (FFT-based features), deployed it as a C++ library, and re-trained and tuned decision thresholds to improve reliability.</li>
+            <li>Implemented SMS alerts and automatic voice calls through a cellular SIM module (AT commands), plus a manual alert button and buzzer.</li>
+            <li>Designed non-blocking firmware (finite state machines, timeouts, millis-based scheduling) to run inference, UART and button handling together without an RTOS; documented the architecture and Edge AI code.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>
+            <a href="https://github.com/Thanhtan2108/TakeCareOf_Vegetable_Smart_IOT" target="_blank" rel="noopener noreferrer">Smart Vegetable Garden Care System</a>
+            <span class="when">09/2025 - 11/2025</span>
+          </h3>
+          <div class="meta"><span>ESP32, FreeRTOS, Blynk, I2C, ADC</span></div>
+          <ul>
+            <li>Built an ESP32 + FreeRTOS system monitoring DHT11, BH1750, MQ135, rain and soil moisture sensors, with automatic control of canopy, irrigation and ventilation.</li>
+            <li>Integrated Blynk Cloud for remote control and data sync, with local OLED display; calibrated sensors for stable operation; wrote the user manual.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <h3>
+            <a href="https://github.com/Thanhtan2108/DEVICE_HEART_RATE_AND_SPO2" target="_blank" rel="noopener noreferrer">Heart Rate and SpO2 Measurement Device</a>
+            <span class="when">02/2025 - 05/2025</span>
+          </h3>
+          <div class="meta"><span>ESP32, MAX30102, OLED, Firebase, I2C</span></div>
+          <ul>
+            <li>Developed ESP32 firmware for a real-time heart rate and SpO2 monitor (MAX30102 over I2C) with OLED display.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <ul class="skills">
+          <li><strong>Languages &amp; MCUs:</strong> C, C++, Python (basic); STM32F103C8T6 (Cortex-M3), ESP32, ESP8266, Arduino, Raspberry Pi 3B+</li>
+          <li><strong>Frameworks &amp; Edge AI:</strong> FreeRTOS (basic), Arduino Framework, Embedded Linux (basic), Edge Impulse.</li>
+          <li><strong>Hardware &amp; Assembly:</strong> PCB assembly, SMD/through-hole soldering, hot-air rework, BOM preparation, schematic and footprint reading, PCB reverse engineering</li>
+          <li><strong>Protocols &amp; IoT:</strong> I2C, SPI, UART, One-Wire, ESP-NOW, AT commands, ADC, GPIO, PWM, Interrupt; Blynk IoT, Firebase Realtime Database, MQTT (basic)</li>
+          <li><strong>Debugging &amp; Tools:</strong> Multimeter; Git/GitHub, VS Code, PlatformIO, Arduino IDE, STM32CubeMX, Keil uVision, Proteus, KiCad</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Certifications &amp; Awards</h2>
+        <ul>
+          <li>
+            Academic Competition No. 3: FEEE ROBOTIS - Endless Maze
+            <a href="./images/endless-maze-certificate.png" target="_blank" rel="noopener noreferrer">(certificate)</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

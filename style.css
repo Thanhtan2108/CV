@@ -1,0 +1,99 @@
+/* Harvard-style, ATS-friendly CV: single column, plain serif text, no icons, tables or images. */
+:root {
+  --ink: #000;
+  --page-bg: #e9e9e9;
+  --todo-bg: #fff3a3;
+}
+
+@page {
+  size: A4;
+  margin: 9mm 13mm;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, "Liberation Serif", serif;
+  font-size: 10pt;
+  line-height: 1.22;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 210mm;
+  margin: 16px auto;
+  padding: 13mm 15mm;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.18);
+}
+
+/* Header */
+header { margin-bottom: 4pt; text-align: center; }
+h1 {
+  margin: 0 0 2pt;
+  font-size: 18pt;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.contact { margin: 0; }
+
+/* Section headings */
+h2 {
+  margin: 6pt 0 3pt;
+  padding-bottom: 1pt;
+  border-bottom: 1px solid var(--ink);
+  font-size: 10.5pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+p { margin: 0 0 3pt; }
+
+/* Entries: bold name + date on one line, italic details underneath */
+.entry { margin-bottom: 3pt; }
+.entry h3,
+.entry .meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12pt;
+  margin: 0;
+}
+.entry h3 { font-size: inherit; align-items: baseline; }
+.entry .meta { font-style: italic; }
+.entry .when { font-weight: 400; }
+.entry .when,
+.entry .aside { white-space: nowrap; }
+
+ul { margin: 2pt 0 0; padding-left: 15pt; }
+li { margin-bottom: 1pt; padding-left: 1pt; }
+
+/* Skills */
+.skills { margin: 0; padding-left: 0; list-style: none; }
+.skills li { padding-left: 0; }
+.skills strong { font-weight: 700; }
+
+/* Placeholders still to be filled in: remove class="todo" once done */
+.todo { background: var(--todo-bg); }
+
+/* Small screens */
+@media (max-width: 700px) {
+  body { font-size: 11pt; }
+  .container { margin: 0; padding: 14px; box-shadow: none; }
+  .entry h3,
+  .entry .meta { flex-direction: column; gap: 0; }
+  .entry .when,
+  .entry .aside { white-space: normal; }
+}
+
+/* Print / Save as PDF */
+@media print {
+  body { background: #fff; }
+  .container { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+  .todo { background: none; }
+  .entry, li { break-inside: avoid; }
+}
